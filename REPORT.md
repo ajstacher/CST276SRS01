@@ -2,7 +2,7 @@
 
 Weather Station Observer
 
-Name: <Not your Pokemon Class ID>
+Name: AJ Stacher
 
 Previous Partner Name:
 

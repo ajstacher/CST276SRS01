@@ -3,6 +3,7 @@
 
 void Observer::update()
 {
+	//update in inherited class
 	return;
 }
 

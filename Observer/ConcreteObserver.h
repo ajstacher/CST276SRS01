@@ -9,14 +9,12 @@ class ConcreteObserver : public Observer
 
 public:
 
-	ConcreteObserver(std::reference_wrapper<Subject> s);
-
 	void update() override;
 
 private:
 
 	ConcreteSubject subject;
-	int observerState{ 0 };
+	bool observerState{ false };
 
 };
 

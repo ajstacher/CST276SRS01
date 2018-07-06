@@ -6,11 +6,11 @@ class ConcreteSubject : public Subject
 public:
 
 	int getState() const;
-	void setState(const int s);
+	void setState(const bool s);
 
 private:
 
-	int subjectState{ 0 };
+	bool subjectState{ false };
 	
 };
 

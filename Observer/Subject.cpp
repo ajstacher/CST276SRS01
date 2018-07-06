@@ -10,20 +10,10 @@ void Subject::attach(std::reference_wrapper<Observer> o)
 
 void Subject::detach(std::reference_wrapper<Observer> obs)
 {
-	/*/return to this with mitch
-	for (auto & o : observers)
-	{
-		if (& obs == & o)
-		{
-			observers.erase(o);
-		}
-
-	}*/
-
 	auto const end{ observers.cend() };
 	auto iter{ observers.cbegin() };
 
-	//mess with remove_if
+	//erase if same reference
 	while (iter != end)
 	{
 		if(&iter->get() == &obs.get())
@@ -32,7 +22,6 @@ void Subject::detach(std::reference_wrapper<Observer> obs)
 		}
 		++iter;
 	}
-	
 	return;
 }
 

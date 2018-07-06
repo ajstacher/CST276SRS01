@@ -6,7 +6,7 @@ int ConcreteSubject::getState() const
 	return subjectState;
 }
 
-void ConcreteSubject::setState(const int s)
+void ConcreteSubject::setState(const bool s)
 {
 	subjectState = s;
 	return;

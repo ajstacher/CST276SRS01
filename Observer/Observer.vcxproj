@@ -168,6 +168,11 @@
     </ClCompile>
     <ClCompile Include="Subject.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WeatherViewer\WeatherViewer.vcxproj">
+      <Project>{99dabdea-0427-48c7-8ed3-9482e25693e5}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

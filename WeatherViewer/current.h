@@ -1,29 +1,24 @@
-#ifndef WEATHER_VIEWER_CURRENT_H
-#define WEATHER_VIEWER_CURRENT_H
-
+#pragma once
 #include <ostream>
+
 
 namespace WeatherViewer
 {
-    class Current
+    class Current : AbstractViewer
     {
         friend std::ostream& operator<<(std::ostream& os, Current const& current);
 
     private:
-        WeatherStation::Station const & station_;
-
-		WeatherStation::Record & lastRecord; 
-
-		
+        WeatherStation::Station TheStation_; 
 
     public:
-		
-		void notify();
 
 		explicit Current(WeatherStation::Station const& station);
 
-        WeatherStation::Station const& getStation() const;
+        static WeatherStation::Station & getStation();
+
+
     };
 }
 
-#endif // WEATHER_VIEWER_CURRENT_H
+

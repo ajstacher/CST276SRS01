@@ -10,11 +10,6 @@
 
 namespace WeatherStation
 {
-    Station::Station() noexcept
-    {
-    }
-
-	
 
 	const WeatherStation::Record & Station::getState() 
 	{
@@ -32,21 +27,6 @@ namespace WeatherStation
 
         history_.emplace_back(record);
     }
-
-	bool Station::notify()
-	{
-		return false;
-	}
-
-    /*WeatherViewer::Statistics Station::getWeatherViewerStatistics() const
-    {
-        return weather_viewer_statistics_;
-    }
-
-    WeatherViewer::Current Station::getWeatherViewerCurrent() const
-    {
-        return weather_viewer_current_;
-    }*/
 
     Temperature Station::getTemperature() const
     {

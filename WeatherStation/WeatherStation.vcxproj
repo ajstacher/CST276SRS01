@@ -90,6 +90,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;WEATHERSTATION_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\AJ\Documents\GitHub\CST276SRS01\WeatherViewer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -147,6 +148,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractStation.h" />
     <ClInclude Include="humidity.h" />
     <ClInclude Include="pressure.h" />
     <ClInclude Include="record.h" />
@@ -156,6 +158,7 @@
     <ClInclude Include="temperature.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AbstractStation.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="humidity.cpp" />
     <ClCompile Include="pressure.cpp" />

@@ -27,6 +27,12 @@
     <ClInclude Include="statistics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AbstractViewer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TheWatherStation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -39,6 +45,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="statistics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AbstractViewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TheWatherStation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

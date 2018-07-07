@@ -22,19 +22,13 @@ namespace WeatherViewer
         return os;
     }
 
-	
+	Current::Current(WeatherStation::Station const &station): TheStation_{ getStation() }
+    {
+    }
 
-	void Current::notify()
+	WeatherStation::Station & Current::getStation()
 	{
-		lastRecord = station_.getState();
+		static WeatherStation::Station instance;
+		return instance;
 	}
-
-	Current::Current(WeatherStation::Station const &station): station_{ station }
-    {
-    }
-
-    WeatherStation::Station const& Current::getStation() const
-    {
-        return station_;
-    }
 }

@@ -14,7 +14,15 @@ namespace WeatherStation
     {
     }
 
-    void Station::measure()
+	
+
+	const WeatherStation::Record & Station::getState() 
+	{
+		//take a measurement and return the last measurement from history
+		return  history_.back();
+	}
+
+	void Station::measure()
     {
         Temperature const temperature{ getTemperature() };
         Humidity const humidity{ getHumidity() };
@@ -42,18 +50,18 @@ namespace WeatherStation
 
     Temperature Station::getTemperature() const
     {
-        auto const result{ Temperature(Temperature::default_value) }; // TODO: Create a mock temperature reading.
+        auto const result{ Temperature(71) }; // TODO: Create a mock temperature reading.
         return result;
     }
 
     Humidity Station::getHumidity() const
     {
-        auto const result{ Humidity(Humidity::default_value) }; // TODO: Create a mock humidity reading.
+        auto const result{ Humidity(60) }; // TODO: Create a mock humidity reading.
         return result;
     }
 
     Pressure Station::getPressure() const {
-        auto const result{ Pressure(Pressure::default_value) }; // TODO: Create a mock pressure reading.
+        auto const result{ Pressure(1000.0) }; // TODO: Create a mock pressure reading.
         return result;
     }
 

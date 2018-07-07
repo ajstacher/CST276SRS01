@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include <iomanip>
-// #include "station.h"
+#include "station.h"
 #include "current.h"
 
 
@@ -17,17 +17,24 @@ namespace WeatherViewer
         os <<
             std::setw(3) << temperature.get() << "°C, " <<
             std::setw(3) << humidity.get()    << "%, "  <<
-            std::setw(4) << pressure.get()    << " in. Hg";
-			*/
+            std::setw(4) << pressure.get()    << " in. Hg";*/
+			
         return os;
     }
 
-    /*Current::Current(WeatherStation::Station const &station): station_{ station }
+	
+
+	void Current::notify()
+	{
+		lastRecord = station_.getState();
+	}
+
+	Current::Current(WeatherStation::Station const &station): station_{ station }
     {
     }
 
     WeatherStation::Station const& Current::getStation() const
     {
         return station_;
-    }*/
+    }
 }

@@ -10,12 +10,19 @@ namespace WeatherViewer
         friend std::ostream& operator<<(std::ostream& os, Current const& current);
 
     private:
-        //WeatherStation::Station const& station_;
+        WeatherStation::Station const & station_;
+
+		WeatherStation::Record & lastRecord; 
+
+		
 
     public:
-        //explicit Current(WeatherStation::Station const& station);
+		
+		void notify();
 
-       // WeatherStation::Station const& getStation() const;
+		explicit Current(WeatherStation::Station const& station);
+
+        WeatherStation::Station const& getStation() const;
     };
 }
 

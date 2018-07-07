@@ -1,18 +1,18 @@
 #include "stdafx.h"
 #include <iomanip>
-// #include "station.h"
+#include "station.h"
 #include "statistics.h"
 
 namespace WeatherViewer
 {
     std::ostream& operator<<(std::ostream& os, WeatherViewer::Statistics const& statistics)
     {
-        auto const& station{ statistics.getStation() };
+        /*auto const& station{ statistics.getStation() };
 
         auto const& begin{ statistics.getBegin() };
         auto const& now{ std::chrono::system_clock::now() };
 
-       /* auto const meanTemperature{ station.getMeanTemperature(begin, now) };
+        auto const meanTemperature{ station.getMeanTemperature(begin, now) };
         auto const meanHumidity{ station.getMeanHumidity(begin, now) };
         auto const meanPressure{ station.getMeanPressure(begin, now) };
 

@@ -16,6 +16,7 @@ namespace WeatherStation
 
     bool Temperature::is_good() const
     {
+		//change back after fix
         auto const result{ value_ >= absolute_zero && value_< (std::numeric_limits<value_type>::max)() };
         return result;
     }

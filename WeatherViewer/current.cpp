@@ -2,7 +2,7 @@
 #include <iomanip>
 // #include "station.h"
 #include "current.h"
-#include "../WeatherStation/station.h"
+
 
 namespace WeatherViewer
 {

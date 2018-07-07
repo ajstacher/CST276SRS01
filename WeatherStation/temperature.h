@@ -1,6 +1,8 @@
 #ifndef WEATHER_STATION_TEMPERATURE_H
 #define WEATHER_STATION_TEMPERATURE_H
 
+
+
 namespace WeatherStation
 {
     class Temperature

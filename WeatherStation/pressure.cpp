@@ -17,7 +17,9 @@ namespace WeatherStation
 
     bool Pressure::is_good() const
     {
-        auto const result{ value_ >= 0.0 && value_< std::numeric_limits<value_type>::max() };
+		//change this back after you get fix
+        auto const result{ value_ >= 0.0 && value_< (std::numeric_limits<value_type>::max)()};
+		
         return result;
     }
 

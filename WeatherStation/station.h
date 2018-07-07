@@ -1,5 +1,10 @@
-#ifndef WEATHER_STATION_STATION_H
-#define WEATHER_STATION_STATION_H
+#pragma once  
+
+#ifdef WEATHERSTATION_EXPORTS  
+#define WEATHERSTATION_API __declspec(dllexport)   
+#else  
+#define WEATHERSTATION_API __declspec(dllimport)   
+#endif  
 
 #include <vector>
 #include <chrono>
@@ -40,4 +45,4 @@ namespace WeatherStation
     };
 }
 
-#endif // WEATHER_STATION_STATION_H
+

@@ -2,11 +2,8 @@
 
 class AbstractViewer
 {
-
 public:
-	virtual ~AbstractViewer() = 0;
-
-	virtual void update();
+	virtual void update() = 0;
 };
 
 

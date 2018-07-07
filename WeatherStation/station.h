@@ -17,11 +17,12 @@
 
 namespace WeatherStation
 {
-    class Station : AbstractStation  
+    class Station : public AbstractStation  
     {
     private:
         std::vector<WeatherStation::Record> history_{};
 
+    public:
 		Temperature getMeanTemperature(std::chrono::system_clock::time_point const t0, std::chrono::system_clock::time_point const t1) const;
 		Humidity getMeanHumidity(std::chrono::system_clock::time_point const t0, std::chrono::system_clock::time_point const t1) const;
 		Pressure getMeanPressure(std::chrono::system_clock::time_point const t0, std::chrono::system_clock::time_point const t1) const;
@@ -29,19 +30,8 @@ namespace WeatherStation
 		Temperature getTemperature() const;
 		Humidity getHumidity() const;
 		Pressure getPressure() const;
-
-
-    public:
         
-
-       // WeatherViewer::Statistics getWeatherViewerStatistics() const;
-       // WeatherViewer::Current getWeatherViewerCurrent() const;
-
-        
-		const WeatherStation::Record & getState();
-        //measure is setState()?
         void measure();
-
     };
 }
 

@@ -11,7 +11,7 @@ namespace WeatherStation
 
 namespace WeatherViewer
 {
-    class Statistics
+    class Statistics : public AbstractViewer
     {
         friend std::ostream& operator<<(std::ostream& os, Statistics const& statistics);
 
@@ -22,8 +22,10 @@ namespace WeatherViewer
     public:
         explicit Statistics(WeatherStation::Station const& station);
 
-        WeatherStation::Station const& getStation() const;
+        WeatherStation::Station & getStation() const;
         std::chrono::system_clock::time_point getBegin() const;
+
+		void update() override;
     };
 }
 

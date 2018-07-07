@@ -1,6 +1,10 @@
 #include "stdafx.h"
 #include "AbstractStation.h"
 
+AbstractStation::~AbstractStation()
+{
+	
+}
 
 void AbstractStation::attach(std::reference_wrapper<AbstractViewer> o)
 {

@@ -10,13 +10,6 @@
 
 namespace WeatherStation
 {
-
-	const WeatherStation::Record & Station::getState() 
-	{
-		//take a measurement and return the last measurement from history
-		return  history_.back();
-	}
-
 	void Station::measure()
     {
         Temperature const temperature{ getTemperature() };

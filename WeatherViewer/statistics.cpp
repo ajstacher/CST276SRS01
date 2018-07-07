@@ -2,12 +2,13 @@
 #include <iomanip>
 #include "station.h"
 #include "statistics.h"
+#include <iostream>
 
 namespace WeatherViewer
 {
     std::ostream& operator<<(std::ostream& os, WeatherViewer::Statistics const& statistics)
     {
-        /*auto const& station{ statistics.getStation() };
+        auto const& station{ statistics.getStation() };
 
         auto const& begin{ statistics.getBegin() };
         auto const& now{ std::chrono::system_clock::now() };
@@ -19,22 +20,29 @@ namespace WeatherViewer
         os <<
             std::setw(3) << meanTemperature.get() << "°C, " <<
             std::setw(3) << meanHumidity.get()    << "%, "  <<
-            std::setw(4) << meanPressure.get()    << " in. Hg";*/
+            std::setw(4) << meanPressure.get()    << " in. Hg";
 
         return os;
     }
 
-    Statistics::Statistics(WeatherStation::Station const &station): station_{ station }
+    Statistics::Statistics(WeatherStation::Station const &station): station_{ getStation() }
     {
+		//attach here
+		getStation().attach(*this);
     }
 
-    WeatherStation::Station const& Statistics::getStation() const
+    WeatherStation::Station & Statistics::getStation() const
     {
-        return station_;
+		static WeatherStation::Station instance;
+		return instance;
     }
 
     std::chrono::system_clock::time_point Statistics::getBegin() const
     {
         return begin_;
     }
+	void Statistics::update()
+	{
+		std::cout << this;
+	}
 }

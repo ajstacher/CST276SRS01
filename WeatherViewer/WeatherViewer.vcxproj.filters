@@ -30,7 +30,7 @@
     <ClInclude Include="AbstractViewer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TheWatherStation.h">
+    <ClInclude Include="TheWeatherStation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -50,7 +50,7 @@
     <ClCompile Include="AbstractViewer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TheWatherStation.cpp">
+    <ClCompile Include="TheWeatherStation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

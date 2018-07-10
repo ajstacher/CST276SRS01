@@ -1,7 +1,7 @@
 #pragma once
 #include "station.h"
 
-class TheWatherStation
+class TheWeatherStation
 {
 public:
 

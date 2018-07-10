@@ -15,10 +15,10 @@ namespace WeatherViewer
         auto const humidity{ station.getHumidity() };
         auto const pressure{ station.getPressure() };
 
-        os <<
-            std::setw(3) << temperature.get() << "°C, " <<
-            std::setw(3) << humidity.get()    << "%, "  <<
-            std::setw(4) << pressure.get()    << " in. Hg";
+		os <<
+			std::setw(3) << temperature.get() << "°C, " <<
+			std::setw(3) << humidity.get() << "%, " <<
+			std::setw(4) << pressure.get() << " in. Hg" << std::endl << std::endl;
 			
         return os;
     }
@@ -36,6 +36,6 @@ namespace WeatherViewer
 	}
 	void Current::update()
 	{
-		std::cout << this;
+		std::cout << *this;
 	}
 }

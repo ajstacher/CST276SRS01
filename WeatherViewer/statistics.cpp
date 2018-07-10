@@ -20,7 +20,7 @@ namespace WeatherViewer
         os <<
             std::setw(3) << meanTemperature.get() << "°C, " <<
             std::setw(3) << meanHumidity.get()    << "%, "  <<
-            std::setw(4) << meanPressure.get()    << " in. Hg";
+            std::setw(4) << meanPressure.get()    << " in. Hg" << std::endl << std:: endl;
 
         return os;
     }
@@ -43,6 +43,6 @@ namespace WeatherViewer
     }
 	void Statistics::update()
 	{
-		std::cout << this;
+		std::cout << *this;
 	}
 }

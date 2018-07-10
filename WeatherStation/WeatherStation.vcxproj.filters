@@ -24,9 +24,6 @@
     <ClInclude Include="humidity.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="pressure.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="record.h">
       <Filter>Source Files</Filter>
     </ClInclude>
@@ -38,6 +35,9 @@
     </ClInclude>
     <ClInclude Include="AbstractStation.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pressure.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

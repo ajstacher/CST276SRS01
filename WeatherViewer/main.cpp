@@ -12,27 +12,16 @@
 int main()
 {
 	//create 
-	//WeatherStation::Station weather_station;
+	WeatherStation::Station weather_station;
+	WeatherViewer::Current current_weather(weather_station);
+	WeatherViewer::Statistics statistics(weather_station);
 
-	//attach
-	//weather_station.attach(current_weather);
-	//weather_station.attach(statistics);
+	for(auto i = 0; i < 3; i++)
+	{
+		weather_station.measure();
+	}
 
-	//WeatherViewer::Current current_weather(weather_station);
-	//WeatherViewer::Statistics statistics(weather_station);
-
-
-	//using Singleton
-	TheWeatherStation theStation;
-	TheWeatherStation theStation2;
-
-	WeatherViewer::Current current_weather(theStation.getWeatherStation());
-	WeatherViewer::Statistics statistics(theStation.getWeatherStation());
-
-	theStation.getWeatherStation().attach(current_weather);
-	theStation.getWeatherStation().attach(statistics);
-	
-	theStation.getWeatherStation().notify();
+	weather_station.notify();
 
     /*std::random_device rd;
     std::mt19937 mt{ rd() };
@@ -47,15 +36,9 @@ int main()
     }*/
 
 	//weather_station.measure();
-	//weather_station.measure();
-	//weather_station.measure();
 
-	
+	//notify here
 
-    /*std::cout <<
-        "Average: " << statistics << "\n" <<
-        "Current: " <<   current_weather  << "\n" <<
-        std::endl;*/
 
     return 0;
 }

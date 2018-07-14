@@ -23,16 +23,15 @@ namespace WeatherViewer
         return os;
     }
 
-	Current::Current(WeatherStation::Station const &station) : station_{ getStation() }
+	Current::Current(WeatherStation::Station & station) : station_{ station}
     {
 		//put attach here
-		getStation().attach(*this);
+		station_.attach(*this);
     }
 
-	WeatherStation::Station & Current::getStation()
+	WeatherStation::Station & Current::getStation() const 
 	{
-		static WeatherStation::Station instance;
-		return instance;
+		return station_;
 	}
 	void Current::update()
 	{

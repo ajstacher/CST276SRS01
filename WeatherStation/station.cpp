@@ -63,13 +63,11 @@ namespace WeatherStation
 
                     if (weighted_value < 0)
                     {
-						//change back after fix
-                        assert(sum >= (std::numeric_limits<decltype(sum)>::min)() - weighted_value);
+                        assert(sum >= std::numeric_limits<decltype(sum)>::min() - weighted_value);
                     }
                     else
                     {
-						//change back after fix
-                        assert(sum < (std::numeric_limits<decltype(sum)>::max)() - weighted_value);
+                        assert(sum < std::numeric_limits<decltype(sum)>::max() - weighted_value);
                     }
 
                     sum += weighted_value;
@@ -84,7 +82,7 @@ namespace WeatherStation
         auto mean{ Temperature::default_value };
         if (duration_count > 0)
         {
-            //mean = gsl::narrow<Temperature::value_type>(sum / duration_count);
+            mean = gsl::narrow<Temperature::value_type>(sum / duration_count);
         }
         auto const result{ Temperature(mean) };
 
@@ -115,14 +113,12 @@ namespace WeatherStation
                     auto const weighted_value{ duration.count() * value.get() };
 
                     if (weighted_value < 0)
-                    {
-						//uncommment later
-                        assert(sum >= (std::numeric_limits<decltype(sum)>::min)() - weighted_value);
+                    {					
+                        assert(sum >= std::numeric_limits<decltype(sum)>::min() - weighted_value);
                     }
                     else
                     {
-						//uncomment later
-                        assert(sum < (std::numeric_limits<decltype(sum)>::max)() - weighted_value);
+                        assert(sum < std::numeric_limits<decltype(sum)>::max() - weighted_value);
                     }
 
                     sum += weighted_value;
@@ -137,7 +133,7 @@ namespace WeatherStation
         auto mean{ Humidity::default_value };
         if (duration_count > 0)
         {
-            //mean = gsl::narrow<Humidity::value_type>(sum / duration_count);
+            mean = gsl::narrow<Humidity::value_type>(sum / duration_count);
         }
         auto const result{ Humidity(mean) };
 
@@ -169,13 +165,11 @@ namespace WeatherStation
 
                     if (weighted_value < 0.0)
                     {
-						//uncomment later
-                        assert(sum >= (std::numeric_limits<decltype(sum)>::min)() - weighted_value);
+                        assert(sum >= std::numeric_limits<decltype(sum)>::min() - weighted_value);
                     }
                     else
                     {
-						//uncomment later
-                        assert(sum < (std::numeric_limits<decltype(sum)>::max)() - weighted_value);
+                        assert(sum < std::numeric_limits<decltype(sum)>::max() - weighted_value);
                     }
 
                     sum += weighted_value;

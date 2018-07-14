@@ -9,15 +9,15 @@ namespace WeatherViewer
         friend std::ostream& operator<<(std::ostream& os, Current const& current);
 
     private:
-		WeatherStation::Station station_;
+		WeatherStation::Station & station_;
 
     public:
-		explicit Current(WeatherStation::Station const& station);
 
-        static WeatherStation::Station & getStation();
+		explicit Current(WeatherStation::Station & station);
+
+        WeatherStation::Station & getStation() const;
 
 		void update() override;
-
 
     };
 }

@@ -21,23 +21,23 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="humidity.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="record.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="station.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="temperature.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="AbstractStation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="humidity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="station.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="record.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="pressure.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="temperature.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

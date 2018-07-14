@@ -30,9 +30,6 @@
     <ClInclude Include="AbstractViewer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TheWeatherStation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -48,9 +45,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AbstractViewer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TheWeatherStation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

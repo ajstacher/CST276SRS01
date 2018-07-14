@@ -25,16 +25,16 @@ namespace WeatherViewer
         return os;
     }
 
-    Statistics::Statistics(WeatherStation::Station const &station): station_{ getStation() }
+    Statistics::Statistics(WeatherStation::Station  & station): station_{ station }
     {
-		//attach here
-		getStation().attach(*this);
+		//put attach here
+		station_.attach(*this);
     }
 
     WeatherStation::Station & Statistics::getStation() const
     {
-		static WeatherStation::Station instance;
-		return instance;
+		
+		return station_;
     }
 
     std::chrono::system_clock::time_point Statistics::getBegin() const

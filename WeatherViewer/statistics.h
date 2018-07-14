@@ -16,13 +16,14 @@ namespace WeatherViewer
         friend std::ostream& operator<<(std::ostream& os, Statistics const& statistics);
 
     private:
-        WeatherStation::Station const& station_;
+        WeatherStation::Station & station_;
         std::chrono::system_clock::time_point const begin_{ std::chrono::system_clock::now() };
 
     public:
-        explicit Statistics(WeatherStation::Station const& station);
+        explicit Statistics(WeatherStation::Station & station);
 
         WeatherStation::Station & getStation() const;
+
         std::chrono::system_clock::time_point getBegin() const;
 
 		void update() override;

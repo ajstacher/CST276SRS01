@@ -4,7 +4,6 @@
 void Observer::update()
 {
 	//impliment in Concrete class
-	return;
 }
 
 
